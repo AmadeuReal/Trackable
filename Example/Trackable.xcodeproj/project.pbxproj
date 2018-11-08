@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		68A8B6B22188A3B2007B4E22 /* Trackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8B6B12188A3B2007B4E22 /* Trackable.swift */; };
+		68A8B6B42188A3C0007B4E22 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8B6B32188A3C0007B4E22 /* Tests.swift */; };
 		9A917A104C6AD94738328710 /* Pods_Trackable_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9519DDB41D8C5B837C10DB03 /* Pods_Trackable_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -15,11 +16,12 @@
 		2A6D6BE08B82A22BF13C4518 /* Pods-Trackable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trackable_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trackable_Tests/Pods-Trackable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Trackable_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trackable_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8AAD104226A9EA75226497FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		9138F3B31910D094153B77D5 /* Trackable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Trackable.podspec; path = ../Trackable.podspec; sourceTree = "<group>"; };
+		68A8B6B12188A3B2007B4E22 /* Trackable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trackable.swift; sourceTree = "<group>"; };
+		68A8B6B32188A3C0007B4E22 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		8AAD104226A9EA75226497FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9138F3B31910D094153B77D5 /* Trackable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Trackable.podspec; path = ../Trackable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9519DDB41D8C5B837C10DB03 /* Pods_Trackable_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trackable_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38FB947681AA859D61B0058 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B38FB947681AA859D61B0058 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EEE1306A6415A9196E8B258A /* Pods-Trackable_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trackable_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trackable_Tests/Pods-Trackable_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,6 +40,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				68A8B6B02188A3A7007B4E22 /* Classes */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -57,7 +60,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				68A8B6B32188A3C0007B4E22 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -79,6 +82,14 @@
 				B38FB947681AA859D61B0058 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		68A8B6B02188A3A7007B4E22 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68A8B6B12188A3B2007B4E22 /* Trackable.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		6DE561AB48FD49701BED1254 /* Pods */ = {
@@ -131,14 +142,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = LC364PKQU9;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -241,7 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				68A8B6B42188A3C0007B4E22 /* Tests.swift in Sources */,
+				68A8B6B22188A3B2007B4E22 /* Trackable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -339,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -351,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A6D6BE08B82A22BF13C4518 /* Pods-Trackable_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = LC364PKQU9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -365,7 +374,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trackable_Example.app/Trackable_Example";
 			};
 			name = Debug;
 		};
@@ -373,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EEE1306A6415A9196E8B258A /* Pods-Trackable_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = LC364PKQU9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -383,7 +392,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trackable_Example.app/Trackable_Example";
 			};
 			name = Release;
 		};

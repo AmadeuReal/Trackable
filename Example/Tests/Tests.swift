@@ -1,28 +1,60 @@
-import XCTest
-import Trackable
+//
+//  Tests.swift
+//  TrackableTests
+//
+//  Created by Amadeu Martos on 30/10/2018.
+//  Copyright © 2018 Amadeu Real. All rights reserved.
+//
 
-class Tests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+import XCTest
+@testable import Trackable
+
+class TimeTrackingSpec: XCTestCase {
+  func testTrackIntValue() {
+    let trackableInt = Trackable<Int>(with: 0)
+    XCTAssertEqual(trackableInt.value, 0)
+    trackableInt.value = 1
+    XCTAssertNotEqual(trackableInt.value, 0)
+  }
+
+  func testTrackIntValue_SetInterval() {
+    let trackableInt = Trackable<Int>(with: 0, timeInterval: 3)
+    trackableInt.value = 1
+    XCTAssertEqual(trackableInt.value, 0)
+  }
+
+  func testTrackIntValue_SetInterval_Updating() {
+    let trackableInt = Trackable<Int>(with: 0, timeInterval: 2)
+    let expectation = XCTestExpectation(description: "Updating value")
+    Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+      timer.invalidate()
+      trackableInt.value = 1
+      expectation.fulfill()
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    wait(for: [expectation], timeout: 4)
+    XCTAssertEqual(trackableInt.value, 1)
+  }
+
+  func testTrackOptionalValue() {
+    let trackableInt = Trackable<Int?>(with: nil)
+    XCTAssertNil(trackableInt.value)
+    trackableInt.value = 0
+    XCTAssertNotNil(trackableInt.value)
+  }
+
+  func testShouldGetTriggerWhenValueChanges() {
+    let trackableInt = Trackable<Int>(with: 0, timeInterval: 2)
+    let expectation = XCTestExpectation(description: "Updating value")
+    Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+      timer.invalidate()
+      trackableInt.value = 1
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    trackableInt.onValueChange = { value in
+      if value == 1 {
+        expectation.fulfill()
+      }
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    wait(for: [expectation], timeout: 4)
+    XCTAssertEqual(trackableInt.value, 1)
+  }
 }
