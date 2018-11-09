@@ -1,6 +1,4 @@
 use_frameworks!
 target 'Trackable_Tests' do
   pod 'Trackable', :path => '../'
-  
-  
 end

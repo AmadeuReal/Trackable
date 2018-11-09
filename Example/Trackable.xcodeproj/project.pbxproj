@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68A8B6B22188A3B2007B4E22 /* Trackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8B6B12188A3B2007B4E22 /* Trackable.swift */; };
 		68A8B6B42188A3C0007B4E22 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8B6B32188A3C0007B4E22 /* Tests.swift */; };
 		9A917A104C6AD94738328710 /* Pods_Trackable_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9519DDB41D8C5B837C10DB03 /* Pods_Trackable_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -16,7 +15,6 @@
 		2A6D6BE08B82A22BF13C4518 /* Pods-Trackable_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trackable_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trackable_Tests/Pods-Trackable_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Trackable_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Trackable_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68A8B6B12188A3B2007B4E22 /* Trackable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trackable.swift; sourceTree = "<group>"; };
 		68A8B6B32188A3C0007B4E22 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8AAD104226A9EA75226497FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9138F3B31910D094153B77D5 /* Trackable.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Trackable.podspec; path = ../Trackable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -40,7 +38,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				68A8B6B02188A3A7007B4E22 /* Classes */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -84,14 +81,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		68A8B6B02188A3A7007B4E22 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				68A8B6B12188A3B2007B4E22 /* Trackable.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		6DE561AB48FD49701BED1254 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +110,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				B2677AE498FB19FE9B54EA33 /* [CP] Embed Pods Frameworks */,
-				1B374C68D2F22DD3C05B11FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,39 +166,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B374C68D2F22DD3C05B11FB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trackable_Tests/Pods-Trackable_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B2677AE498FB19FE9B54EA33 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Trackable_Tests/Pods-Trackable_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Trackable/Trackable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Trackable.framework",
 			);
@@ -224,15 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Trackable_Tests-checkManifestLockResult.txt",
 			);
@@ -249,7 +210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				68A8B6B42188A3C0007B4E22 /* Tests.swift in Sources */,
-				68A8B6B22188A3B2007B4E22 /* Trackable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
