@@ -11,5 +11,5 @@ before_install:
 - pod install --project-directory=Example
 script:
 - ls -l
-- set -o pipefail && xcodebuild test -workspace Example/Trackable.xcworkspace -scheme Trackable-Example -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/Trackable.xcworkspace -scheme Trackable-Example -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' | xcpretty
 - pod lib lint
