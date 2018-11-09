@@ -10,5 +10,6 @@ cache: cocoapods
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
+- pwd
 - set -o pipefail && xcodebuild test -workspace Example/Trackable.xcworkspace -scheme Trackable-Example -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' | xcpretty
 - pod lib lint
