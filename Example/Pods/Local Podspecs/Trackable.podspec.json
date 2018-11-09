@@ -1,0 +1,24 @@
+{
+  "name": "Trackable",
+  "version": "0.1.0",
+  "summary": "Control variable changes.",
+  "description": "Just a small lib that helps you gain control of your variables",
+  "homepage": "https://github.com/AmadeuReal/Trackable",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AmadeuReal": "amadeureal@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/AmadeuReal/Trackable.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/AmadeuReal",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Trackable/Classes/**/*",
+  "frameworks": "Foundation"
+}
