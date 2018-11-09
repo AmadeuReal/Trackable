@@ -11,5 +11,5 @@ cache: cocoapods
 # - pod install --project-directory=Example
 script:
 - pwd
-- set -o pipefail && xcodebuild test -workspace Example/Trackable.xcworkspace -scheme Trackable-Example -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' | xcpretty
+- set -o pipefail && xcodebuild test -workspace Trackable/Example/Trackable.xcworkspace -scheme Trackable-Example -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' | xcpretty
 - pod lib lint
